@@ -1,0 +1,23 @@
+﻿
+
+#We have a csv file with columns:
+# msisdn, session_id, session_start_time, session_end_time, short_code, dialled_string
+# session_start_time and session_end_time are dates formatted '[YEAR][MONTH][DAY][HOUR][MINUTE][SECOND]'
+# A session is 20 seconds.
+# Round up the session to the nearest 20 seconds (e.g. 21 seconds = 2 sessions)
+
+# 1. We want a summary of this file in csv with columns:
+#        Short-code, Number-of-sessions
+
+# 2. We want to find out how many sessions in total are 
+#      a) Airtime purchases
+#      b) Account transfers
+
+#    Note:
+#    For airtime purchases, the dialled string is of format "SHORTCODE*AMOUNT*11-digit-number" or"SHORTCODE*AMOUNT"
+#    For Account transfers, the dialled string is of format "SHORTCODE*AMOUNT*10-digit-number”
+
+2020 05 01 01 31 55
+
+
+

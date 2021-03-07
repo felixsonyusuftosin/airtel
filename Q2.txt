@@ -1,0 +1,11 @@
+Here is question #2.
+
+
+# We have a log file that we want to analyse with shell script # We want to get the list of msisdns for which notification has been sent 
+
+# An example of a notification.
+# 2020-05-06T03:48:37+01:00       csdp.worker     {"container_id":"52a91cdab0d0b485d59198005a32d5c4beb5051c7193dbf3c447240383816592","container_name":"/csdp_worker","source":"stderr","log":"[2020-05-06 02:4
+8:37,921: WARNING/ForkPoolWorker-8] response from PARTNER NOTIFICATION: {'amount': 42.5, 'trans_ref': '15887332600842100', 'max_amount': 42.5, 'trans_datetime': '2020-05-06 03:48:37', 'msisdn': '234904534 2093', 'transaction_type': 'AIRTIME', 'status': 'success'}. Params: {'msisdn': '2349045342093', 'amount': 42.5, 'max_amount': 42.5, 'trans_ref': '15887332600842100', 'trans_datetime': '2020-05-06 03:48:37 ', 'transaction_type': 'AIRTIME', 'type': 'fulfillment', 'status': 'success'}"}
+
+
+# There are 3 kinds of notifications: AIRTIME, DATA, TALKTTIME # We need to extract the list of each kind of notification.
