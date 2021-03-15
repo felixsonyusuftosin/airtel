@@ -59,6 +59,7 @@ with open('input/test_files.csv', newline='') as csv_file:
           end_date = str(row[3])
           short_code = row[4]
           dialed_string = row[5]
+
           start_date_date = format_to_date(start_date)
           end_date_date = format_to_date(end_date)
           diff = compute_date_difference_in_seconds(start_date_date, end_date_date)
@@ -66,6 +67,7 @@ with open('input/test_files.csv', newline='') as csv_file:
           row = [short_code, sessions]
           write_to_csv(row, test_file)
           category_of_transfer = categorise_dialed_string(dialed_string)
+          
           if category_of_transfer == ACCOUNT_TRANSFERS:
             summary_dict['Account Transfers'] = summary_dict['Account Transfers'] + 1
           elif category_of_transfer == AIRTIME_PURCHASE:
