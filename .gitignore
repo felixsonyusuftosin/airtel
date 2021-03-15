@@ -1,0 +1,10 @@
+.DS_Store
+.vscode
+src/q1/output/*
+src/q2/output/*
+**output/*
+**output/*
+**__pycache__
+__pycache__
+**venv
+!readme.md
