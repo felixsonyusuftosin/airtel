@@ -52,7 +52,8 @@ with open('input/test_files.csv', newline='') as csv_file:
       test_writer.writerow(['Short Code', 'Number of Sessions'])
       csv_reader = csv.reader(csv_file, delimiter=',')
       line_count = 0
-      summary_dict = { 'Account Transfers' : 0, 'Airtime Purchase': 0}
+      summary_dict = {'Account Transfers': 0, 'Airtime Purchase': 0}
+      
       for row in csv_reader:
           start_date = str(row[2])
           end_date = str(row[3])
@@ -69,6 +70,7 @@ with open('input/test_files.csv', newline='') as csv_file:
             summary_dict['Account Transfers'] = summary_dict['Account Transfers'] + 1
           elif category_of_transfer == AIRTIME_PURCHASE:
             summary_dict['Airtime Purchase'] = summary_dict['Airtime Purchase'] + 1
+         
       with open('output/test_files_summary.csv', 'w', newline='') as summary_file:
         summary_writer = csv.writer(summary_file, delimiter=',')
         summary_writer.writerow(['Account Transfers', 'Airtime Purchase'])
